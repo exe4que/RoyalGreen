@@ -16,7 +16,7 @@ public class SidebarManager : MonoBehaviour {
     }
 
     public void ActivatePanel(int _index) {
-        if (background.enabled) background.enabled = false;
+        background.enabled = _index == -1;
         for (int i = 0; i < panels.Length; i++) {
                 panels[i].SetActive(i == _index);
         }
